@@ -1,0 +1,30 @@
+{
+  "description": "This experiment will terminate an EC2 instance",
+  "targets": {
+      "Instances-Target-1": {
+          "resourceType": "aws:ec2:instance",
+          "resourceArns": [
+              "arn:aws:ec2:us-east-1::instance/i-0c674c6bce2276f8a"
+          ],
+          "selectionMode": "ALL"
+      }
+  },
+  "actions": {
+      "Kill-ec2": {
+          "actionId": "aws:ec2:terminate-instances",
+          "parameters": {},
+          "targets": {
+              "Instances": "Instances-Target-1"
+          }
+      }
+  },
+  "stopConditions": [
+      {
+          "source": "none"
+      }
+  ],
+  "roleArn": "arn:aws:iam:::role/Demo-FIS-role",
+  "tags": {
+      "Name": "Demo"
+  }
+}
