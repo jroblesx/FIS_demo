@@ -18,11 +18,11 @@ Este repositorio trata de ilustrar cómo podemos mejorar la confiabilidad de nue
 
 2. Crea tu primer experimento y template.
 
-3. Ejecuta el script `testEndpoint.sh`, para usarlo desde tu terminal ve al directorio infra y ejectua `./testEndpoint.sh <LoadBalancerDNSCopiadoEnElUltimoPasoDelSetup>`.
+3. Ejecuta el script `testEndpoint.sh`, para usarlo desde tu terminal ve al directorio `src` y ejectua `./testEndpoint.sh <LoadBalancerDNSCopiadoEnElUltimoPasoDelSetup>`.
 
 4. Todos los request deben retornar 200.
 
 5. Ejecuta el Experimento y vuelve a probar el script, ahora debes ver que algunos requests retornan 504 o 503.
 
 ## Cleanup
-Desde el directorio`infra` ejecuta `cdk destroy`.
+Desde el directorio `src` ejecuta `cdk destroy`.
